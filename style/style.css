@@ -1,0 +1,149 @@
+/* 1.1.general-setting-pages *************************/
+/****************************************************/
+:root {
+	--pr-color: #fff;
+	--second-color: #0a0a0a;
+	--cubicbz: cubic-bezier(.9, 0, .1, 1);
+	--index: 35px;
+	--fz-big: 90px;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Syne', sans-serif;
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+body {
+	background: var(--second-color);
+}
+
+.wrapp {
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.color {
+	color: #8aff00;
+}
+
+/* Amazing three.js gradient background **********************************/
+.header {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: var(--index);
+	overflow: hidden;
+}
+
+.header__bl {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--index);
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.header__txt {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+	border: 1px solid #8aff00;
+}
+
+.title {
+	position: relative;
+	width: 100%;
+	margin: 20px var(--index);
+	font-size: 70px;
+	line-height: 1.3;
+	text-transform: uppercase;
+	color: var(--pr-color);
+	z-index: 3;
+}
+
+#background {
+	width: 100%;
+	min-height: 10px;
+	flex: 1 1 100%;
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+.header__footer {
+	position: absolute;
+	padding: 0 calc(var(--index) * 2);
+	width: 100%;
+	height: auto;
+	bottom: calc(var(--index) * 2);
+	left: 0;
+	z-index: 2;
+}
+
+.header__footer-wrapp {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.header__footer-txt {
+	position: relative;
+	padding: 15px 35px;
+	padding-left: 70px;
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	background: #9999991f;
+	border: 1px solid #a3a2a21f;
+	border-radius: 20px;
+	backdrop-filter: blur(15px);
+}
+
+.header__footer-txt:nth-child(2) {
+	margin-left: auto;
+	text-align: right;
+	line-height: .7;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 45px;
+}
+
+.header__footer-img {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+}
+
+.header__footer-img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	animation: rotate 9s infinite linear;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(-360deg);
+	}
+}
